@@ -13,6 +13,7 @@ header {
     align-items: center; /* Center items vertically */
     padding: 35px; /* Adjust padding to fit the layout */
     height: 72px; /* Make sure header height accommodates both logo and menu */
+    z-index: 1;
 }
 
 header .logo {
@@ -35,6 +36,7 @@ header nav {
     flex-grow: 1;
     padding-top: 25px;
     padding-right: 100px;
+    z-index: 1;
 }
 
 header nav a {
@@ -44,6 +46,7 @@ header nav a {
     color: #FFFFFF;
     margin: 0 15px;
     text-decoration: none;
+    z-index: 1;
 }
 
 header .get-in-touch a {
@@ -56,6 +59,7 @@ header .get-in-touch a {
     color: #D3FF56; /* Dark text color */
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
+    z-index: 1;
 }
 
 header .get-in-touch a:hover {
@@ -71,7 +75,7 @@ header .get-in-touch a:hover {
     box-sizing: border-box; 
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     gap: 20px;
 } 
 
@@ -141,6 +145,7 @@ header .get-in-touch a:hover {
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 60px;
+    z-index: 1;
 }
 
 .logo {
@@ -157,8 +162,18 @@ header .get-in-touch a:hover {
     line-height: 1.333;
 }
 
+.intro--box {
+    background-color: #2a2836; /* Lighter shade for the box */
+    width: 50vw; /* Adjust the width as needed */
+    height: 100vh; /* Full height of the hero section */
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .highlight-text {
     color: #D3FF56;
+    font-weight: bold;
 }
 
 .regular-text {
@@ -181,8 +196,10 @@ header .get-in-touch a:hover {
 }
 
 .scroll-icon .icon {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
+    fill: #D3FF56;
+    margin-right: 10px;
 }
 
 /* Skills Section */
@@ -471,6 +488,11 @@ header .get-in-touch a:hover {
     .menu-button {
         display: flex; /* Show menu button on mobile */
         padding-top: 20px;
+    }
+
+    .intro--box {
+        width: 45vw; /* On smaller screens, still keep 90% width */
+        margin-left: auto; /* Ensure it's still anchored to the right */
     }
 
     
