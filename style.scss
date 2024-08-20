@@ -430,11 +430,13 @@ header .get-in-touch a:hover {
 }
 
 .experience-item {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     padding: 20px;
     background-color: #1C1A27;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow for depth */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
 }
 
 .experience-header {
@@ -477,6 +479,24 @@ header .get-in-touch a:hover {
     position: absolute;
     left: -20px;
     font-size: 20px; /* Adjust bullet size */
+}
+
+.experience-arrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #D3FF56; /* Green color for the arrow */
+    transform: rotate(0deg); /* Keeps the arrow pointing up */
+    cursor: pointer; /* Changes the cursor to indicate it's clickable */
+    position: absolute;
+    right: 0; /* Position the arrow on the right side */
+    top: 0; /* Align the arrow with the top of the header */
+    cursor: pointer; /* Make it look clickable 
+}
+
+.experience-item:last-child {
+    border-bottom: none; /* Remove the border from the last item */
 }
 
 .nav-menu {
@@ -523,22 +543,71 @@ header .get-in-touch a:hover {
     font-size: 16px;
 }
 
-/* Get in Touch Button */
-.nav-links .get-in-touch a {
-    font-weight: 500;
-    color: #FFFFFF;
-    padding: 10px 20px;
-    border: 2px solid #D3FF56;
-    border-radius: 5px;
-    background-color: #D3FF56;
-    color: #1C1A27;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+/* Contact section / Get in Touch Button */
+.contact-section {
+    background-color: #2a2836; /* Dark background for the section */
+    padding: 100px 20px; /* Padding around the section */
+    text-align: center; /* Center-align the content */
 }
 
-.nav-links .get-in-touch a:hover {
-    background-color: #FFFFFF;
-    color: #1C1A27;
+.contact-content {
+    background-color: #3a3948; /* Slightly lighter background for the content box */
+    padding: 40px; /* Padding inside the content box */
+    border-radius: 10px; /* Rounded corners for the content box */
+    max-width: 600px; /* Maximum width for the content box */
+    margin: 0 auto; /* Center the content box */
+}
+
+.lets-work-together {
+    font-family: 'Cormorant', serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #FFFFFF;
+    text-transform: uppercase; /* Uppercase text */
+    margin-bottom: 20px; /* Space between title and description */
+}
+
+.contact-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 30px; /* Space between description and button */
+}
+
+
+.contact-button.bottom-button {
+    display: flex;
+    justify-content: center; /* Center the button */
+}
+
+.bottom-get-in-touch {
+    background-color: #3a3948; /* Darker background for the button */
+    color: #D3FF56; /* Bright green text */
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 15px 30px; /* Padding inside the button */
+    border-radius: 50px; /* Fully rounded button */
+    text-transform: uppercase; /* Uppercase text */
+    display: inline-flex; /* Flexbox for aligning text and icon */
+    align-items: center; /* Vertically center the content */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.bottom-get-in-touch:hover {
+    background-color: #D3FF56; /* Invert colors on hover */
+    color: #3a3948; /* Darker text color on hover */
+}
+
+.bottom-send-icon {
+    margin-left: 10px; /* Space between text and icon */
+    fill: currentColor; /* Inherit text color */
+    width: 20px;
+    height: 20px;
 }
 
 /* Hide main image on mobile */
