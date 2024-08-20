@@ -7,6 +7,14 @@ body {
   color: #FFFFFF;
 }
 
+header {
+  display: flex;
+  justify-content: space-between; /* Space between logo and nav */
+  align-items: center; /* Center items vertically */
+  padding: 35px; /* Adjust padding to fit the layout */
+  height: 72px; /* Make sure header height accommodates both logo and menu */
+}
+
 header .logo {
   display: flex;
   font-family: "Cormorant";
@@ -16,7 +24,7 @@ header .logo {
   text-decoration: none; /* Remove underline */
   margin-right: auto; /* Align inline with the nav bar */
   padding-top: 25px;
-  padding-left: 40px;
+  padding-left: 20px;
 }
 
 header nav {
@@ -58,14 +66,12 @@ header .get-in-touch a:hover {
 .hero-section {
   background: #1C1A27;
   display: flex;
-  padding-top: 100px; /* Adjusted padding-top to account for the fixed header */
+  padding-top: 25px; /* Adjusted padding-top to account for the fixed header */
   box-sizing: border-box;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 25px;
   gap: 20px;
-  border-color: red;
 }
 
 /* Resize the main image */
@@ -160,10 +166,9 @@ header .get-in-touch a:hover {
 
 .scroll-info {
   text-align: left;
-  display: flex;
-  align-items: left;
-  justify-content: center;
   margin: 20px 0;
+  display: flex;
+  padding-top: 250px;
 }
 
 .scroll-text {
@@ -181,6 +186,7 @@ header .get-in-touch a:hover {
 
 /* Skills Section */
 .skills-section {
+  padding-top: 900px;
   text-align: center;
   padding: 60px 0;
 }
@@ -375,6 +381,7 @@ header .get-in-touch a:hover {
 .nav-menu {
   display: flex;
   align-items: center;
+  flex-grow: 1;
 }
 
 /* Menu button styling */
@@ -403,6 +410,7 @@ header .get-in-touch a:hover {
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-grow: 1;
 }
 
 .nav-links a {
@@ -433,6 +441,11 @@ header .get-in-touch a:hover {
 
 /* Hide main image on mobile */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
   .home-img {
     display: none; /* Hide the image on mobile devices */
   }
@@ -451,6 +464,7 @@ header .get-in-touch a:hover {
   }
   .menu-button {
     display: flex; /* Show menu button on mobile */
+    padding-top: 20px;
   }
 }
 /* Footer */
