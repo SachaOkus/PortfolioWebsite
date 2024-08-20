@@ -1,0 +1,480 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #1C1A27;
+    color: #FFFFFF;
+}
+
+header .logo {
+    display: flex;
+    font-family: 'Cormorant';
+    font-weight: 700;
+    font-size: 40px;
+    color: #D3FF56;
+    text-decoration: none; /* Remove underline */
+    margin-right: auto; /* Align inline with the nav bar */
+    padding-top: 25px;
+    padding-left: 40px;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 25px;
+    padding-right: 100px;
+}
+
+header nav a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+header .get-in-touch a {
+    font-weight: 500;
+    color: #D3FF56;
+    padding: 10px 20px;
+    border: 2px solid #D3FF56; /* Green border */
+    border-radius: 5px;
+    background-color: transparent; 
+    color: #D3FF56; /* Dark text color */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header .get-in-touch a:hover {
+    background-color: #FFFFFF; /* Lighter background on hover */
+    color: #1C1A27; /* Darker text color on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    background: #1C1A27 ; 
+    display: flex;
+    padding-top: 100px; /* Adjusted padding-top to account for the fixed header */
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 25px;
+    gap: 20px;
+    border-color: red;
+}
+
+/* Resize the main image */
+.hero-section .home-img img {
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: add rounded corners */
+}
+
+/* Intro text adjustment */
+.hero-section .intro {
+    text-align: left; /* Align text to the left */
+    max-width: 400px; /* Limit the width of the text section */
+    color: #FFFFFF;
+    padding: 35px;
+}
+
+.hero-section .intro-subtitle {
+    font-family: 'Cormorant';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.333;
+    padding-bottom: 20px;
+}
+
+.hero-section .highlight-text {
+    color: #D3FF56;
+    display: block;
+}
+
+.hero-section .regular-text {
+    color: #FFFFFF;
+    display: block;
+}
+
+.hero-section .intro-paragraph {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 20px;
+}
+
+.hero-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-line {
+    background: #D3FF56;
+    width: 20px;
+    height: 2px;
+}
+
+.header-dot {
+    background: #D3FF56;
+    width: 9px;
+    height: 9px; /* Adjusted to make the dot a square */
+    margin: 0 11px;
+    border-radius: 50%; /* Making the dot round */
+}
+
+.intro {
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 60px;
+}
+
+.logo {
+    font-family: 'Cormorant', serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #D3FF56;
+}
+
+.intro-subtitle {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.333;
+}
+
+.highlight-text {
+    color: #D3FF56;
+}
+
+.regular-text {
+    color: #FFFFFF;
+}
+
+.scroll-info {
+    text-align: left;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.scroll-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: transparent;
+}
+
+.scroll-icon .icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Skills Section */
+.skills-section {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.skills-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.skills-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0 auto 74.8px;
+    max-width: 600px;
+    padding: 25px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+    padding: 10px;
+}
+
+.skill-icon {
+    width: 67px;
+    height: 67px;
+}
+
+.skill-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #D3FF56;
+    margin-top: 10px;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    text-align: center;
+    margin-bottom: 47px;
+    padding: 60px 0;
+}
+
+.portfolio-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.portfolio-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.filter-item {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.filter-item:hover {
+    color: #FFFFFF;
+}
+
+/* Projects */
+.project {
+    margin: 0 auto 60px;
+    position: relative;
+}
+
+.project-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.project-separator {
+    width: 55px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 15px auto;
+}
+
+.project-tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.project-tag {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 60px 0;
+}
+
+.about-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Experience Section */
+.experience-section {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.experience-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.experience-item {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.experience-role {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #D3FF56;
+}
+
+.experience-date {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 10px 0;
+}
+
+.experience-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.experience-detail {
+    margin-bottom: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Menu button styling */
+.menu-button {
+    display: none; /* Hidden by default, shown on mobile */
+    flex-direction: column;
+    cursor: pointer;
+    background-color: transparent; /* Green color for the hamburger menu */
+    border: none; /* Remove any default border */
+    padding: 10px; /* Add padding for better click area */
+    position: absolute; /* Position it absolutely within header */
+    right: 40px; /* Adjust distance from the right edge */
+    top: 20px; 
+}
+
+
+.menu-button .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #D3FF56; /* Dark color for bars */
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Navigation links styling */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* Get in Touch Button */
+.nav-links .get-in-touch a {
+    font-weight: 500;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: 2px solid #D3FF56;
+    border-radius: 5px;
+    background-color: #D3FF56;
+    color: #1C1A27;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links .get-in-touch a:hover {
+    background-color: #FFFFFF;
+    color: #1C1A27;
+}
+
+/* Hide main image on mobile */
+@media (max-width: 768px) {
+    .home-img {
+        display: none; /* Hide the image on mobile devices */
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        background: #1C1A27;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 0; /* Align to the right */
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .menu-button {
+        display: flex; /* Show menu button on mobile */
+    }
+}
+/* Footer */
+.footer {
+    background-color: #D3FF56;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: black
+}
+
+.footer-logo {
+    font-family: 'Cormorant', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+    margin-top: 10px;
+}
