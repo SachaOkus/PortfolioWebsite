@@ -50,12 +50,10 @@ header nav a {
 
 header .get-in-touch a {
   font-weight: 500;
-  color: #D3FF56;
   padding: 10px 20px;
   border: 2px solid #D3FF56; /* Green border */
   border-radius: 5px;
   background-color: transparent;
-  color: #D3FF56; /* Dark text color */
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
   z-index: 1;
@@ -267,13 +265,15 @@ header .get-in-touch a:hover {
   font-size: 32px;
   color: #FFFFFF;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .portfolio-filter {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 40px;
+  padding-left: 15px;
 }
 
 .filter-item {
@@ -303,17 +303,15 @@ header .get-in-touch a:hover {
   margin-bottom: 10px;
 }
 
-.project-separator {
-  width: 55px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.5);
-  margin: 15px auto;
+.project-item {
+  margin-bottom: 100px; /* Space between projects */
 }
 
 .project-tags {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-left: 20px;
 }
 
 .project-tag {
@@ -321,6 +319,20 @@ header .get-in-touch a:hover {
   font-weight: 500;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.75);
+  background-color: #2a2836; /* Button-like appearance with a colored background */
+  padding: 5px 15px; /* Increase padding for a button-like look */
+  border-radius: 20px; /* Make the buttons rounded */
+  border: none; /* Remove any default border */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project-tag:hover {
+  background-color: #b8e040; /* Slightly darker shade on hover */
+}
+
+.project-thumbnail {
+  max-width: 100%; /* Ensures the image does not overflow */
 }
 
 /* About Section */
@@ -486,6 +498,12 @@ header .get-in-touch a:hover {
   .intro--box {
     width: 45vw; /* On smaller screens, still keep 90% width */
     margin-left: auto; /* Ensure it's still anchored to the right */
+  }
+  .projects-list {
+    grid-template-columns: 1fr; /* Display projects in a single column on small screens */
+  }
+  .portfolio-title, .portfolio-filter, .project-title {
+    padding-left: 10px; /* Adjust padding for smaller screens */
   }
 }
 /* Footer */
