@@ -258,6 +258,13 @@ header .get-in-touch a:hover {
     text-align: center;
     margin-bottom: 47px;
     padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.portfolio-header{
+    padding-left: 20px;
 }
 
 .portfolio-title {
@@ -265,8 +272,9 @@ header .get-in-touch a:hover {
     font-weight: 400;
     font-size: 32px;
     color: #FFFFFF;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     text-align: left;
+    padding-right: 20px;
 }
 
 .portfolio-filter {
@@ -274,7 +282,6 @@ header .get-in-touch a:hover {
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 40px;
-    padding-left: 15px;
 }
 
 .filter-item {
@@ -282,12 +289,35 @@ header .get-in-touch a:hover {
     font-weight: 700;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.5);
-    margin: 0 10px;
+    margin: 10px;
     cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.filter-item.active {
+    color: #FFFFFF; /* Highlight the active item */
+    font-weight: 700; /* Make the active item bold */
+    position: relative;
+}
+
+.filter-item.active::after {
+    content: '';
+    display: block;
+    width: 100%; /* Underline width matches the text width */
+    height: 2px;
+    background-color: #D3FF56; /* Bright underline color */
+    position: absolute;
+    bottom: -3px; /* Adjust to position the underline just below the text */
+    left: 0;
 }
 
 .filter-item:hover {
     color: #FFFFFF;
+}
+
+.separator {
+    color: rgba(255, 255, 255, 0.5); /* Separator color */
 }
 
 /* Projects */
@@ -302,17 +332,19 @@ header .get-in-touch a:hover {
     font-size: 20px;
     color: #FFFFFF;
     margin-bottom: 10px;
+    text-align: left;
+    padding-left: 20px;
 }
 
 .project-item {
     margin-bottom: 100px; /* Space between projects */
+    padding-left: 20px;
 }
 
 .project-tags {
     display: flex;
     justify-content: flex-start;
     gap: 20px;
-    padding-left: 20px;
 }
 
 .project-tag {
@@ -334,6 +366,12 @@ header .get-in-touch a:hover {
 
 .project-thumbnail {
     max-width: 100%; /* Ensures the image does not overflow */
+    width: 90%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the image */
+    border-radius: 8px; /* Optional: add rounded corners */
+    object-fit: cover; /* Cover the container area without distorting the image */
 }
 
 /* About Section */
@@ -513,6 +551,10 @@ header .get-in-touch a:hover {
     
     .portfolio-title, .portfolio-filter, .project-title {
         padding-left: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .project-item:nth-child(n+3) {
+        display: none; /* Hide all projects starting from the third one */
     }
 
     
