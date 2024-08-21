@@ -36,6 +36,7 @@ header nav {
   flex-grow: 1;
   padding-top: 25px;
   padding-right: 100px;
+  margin-left: auto;
   z-index: 1;
 }
 
@@ -46,6 +47,9 @@ header nav a {
   color: #FFFFFF;
   margin: 0 15px;
   text-decoration: none;
+  margin-left: auto;
+  display: flex;
+  justify-content: right;
   z-index: 1;
 }
 
@@ -72,7 +76,7 @@ header .get-in-touch a:hover {
   display: flex;
   padding-top: 25px; /* Adjusted padding-top to account for the fixed header */
   box-sizing: border-box;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
@@ -379,15 +383,17 @@ header .get-in-touch a:hover {
 /* My Journey Section */
 .journey-section {
   text-align: left;
-  padding: 40px;
-  background-color: #1C1A27; /* Match your website's background */
-  padding-top: 0px;
+  background-color: #2a2836; /* Ensure the background contrasts well with the text */
+  margin-top: 40px; /* Space between sections */
+  padding: 60px 20px;
+  display: block;
+  justify-content: space-between;
 }
 
-.journey-header {
-  max-width: 600px; /* Restrict the width of the text */
+.journey-header { /* Restrict the width of the text */
   margin: 0 auto; /* Center the text block */
   padding-bottom: 20px; /* Space between the text and the image */
+  max-width: 50%;
 }
 
 .my-journey {
@@ -406,6 +412,8 @@ header .get-in-touch a:hover {
   color: rgba(255, 255, 255, 0.75);
   margin-bottom: 20px; /* Space between paragraphs */
   margin-top: 0px;
+  max-width: 50%; /* Half width */
+  margin-left: auto;
 }
 
 .journey-image img {
@@ -418,7 +426,7 @@ header .get-in-touch a:hover {
 /* Experience Section */
 .experience-section {
   text-align: left;
-  background-color: #1C1A27;
+  background-color: #2a2836;
   margin-top: 40px; /* Space between the Journey image and Experience section */
 }
 
@@ -433,10 +441,8 @@ header .get-in-touch a:hover {
 .experience-item {
   margin-bottom: 10px;
   padding: 20px;
-  background-color: #1C1A27;
+  background-color: transparent;
   border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow for depth */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
 }
 
@@ -541,17 +547,16 @@ header .get-in-touch a:hover {
 
 /* Contact section / Get in Touch Button */
 .contact-section {
-  background-color: #2a2836; /* Dark background for the section */
   padding: 100px 20px; /* Padding around the section */
   text-align: center; /* Center-align the content */
 }
 
 .contact-content {
-  background-color: #3a3948; /* Slightly lighter background for the content box */
   padding: 40px; /* Padding inside the content box */
   border-radius: 10px; /* Rounded corners for the content box */
   max-width: 600px; /* Maximum width for the content box */
   margin: 0 auto; /* Center the content box */
+  width: 80%;
 }
 
 .lets-work-together {
@@ -645,6 +650,20 @@ header .get-in-touch a:hover {
   .project-item:nth-child(n+3) {
     display: none; /* Hide all projects starting from the third one */
   }
+  .journey-section {
+    flex-direction: column; /* Stack elements */
+    align-items: center; /* Center align text */
+    padding: 20px;
+  }
+  .journey-header,
+  .journey-description {
+    max-width: 100%; /* Full width */
+    text-align: center; /* Center align text */
+    margin-left: 0; /* Remove left margin */
+  }
+  .journey-description {
+    margin-top: 20px; /* Add spacing between elements */
+  }
 }
 /* Tablet View (768px - 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -652,11 +671,6 @@ header .get-in-touch a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .home-img img {
-    width: 50%;
-    height: auto;
-    margin: 20px 0;
   }
   .social-icons {
     display: flex;
@@ -679,6 +693,9 @@ header .get-in-touch a:hover {
   }
   .footer {
     padding: 40px 20px;
+  }
+  .journey-image {
+    display: none;
   }
 }
 /* Desktop View (1025px and above) */
@@ -715,6 +732,9 @@ header .get-in-touch a:hover {
   }
   .footer {
     padding: 60px 100px;
+  }
+  .journey-image {
+    display: none;
   }
 }
 /* Footer */
